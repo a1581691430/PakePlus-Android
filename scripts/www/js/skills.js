@@ -1,0 +1,50 @@
+(function(G) {
+  G.SkillType = {
+    DAMAGE: 'damage',
+    CONTROL: 'control',
+    DEBUFF: 'debuff',
+    TACTICAL: 'tactical',
+  };
+
+  G.SkillsDB = {
+    fire_breath: { id: 'fire_breath', name: '火焰吐息', type: G.SkillType.DAMAGE, element: 'fire', power: 45, accuracy: 95, pp: 5, cooldown: 0, attackType: 'spa', description: '吐出灼热的火焰攻击敌人' },
+    flame_burst: { id: 'flame_burst', name: '烈焰爆发', type: G.SkillType.DAMAGE, element: 'fire', power: 70, accuracy: 90, pp: 5, cooldown: 0, attackType: 'spa', description: '释放强烈的火焰爆发' },
+    inferno_strike: { id: 'inferno_strike', name: '炼狱冲击', type: G.SkillType.DAMAGE, element: 'fire', power: 100, accuracy: 85, pp: 5, cooldown: 0, attackType: 'spa', description: '召唤炼狱之火进行毁灭性打击' },
+    water_jet: { id: 'water_jet', name: '水流喷射', type: G.SkillType.DAMAGE, element: 'water', power: 40, accuracy: 100, pp: 5, cooldown: 0, attackType: 'spa', description: '高速喷射水流攻击敌人' },
+    aqua_vortex: { id: 'aqua_vortex', name: '水漩涡', type: G.SkillType.DAMAGE, element: 'water', power: 65, accuracy: 95, pp: 5, cooldown: 0, attackType: 'spa', description: '制造巨大的水漩涡吞噬敌人' },
+    tsunami_wave: { id: 'tsunami_wave', name: '海啸巨浪', type: G.SkillType.DAMAGE, element: 'water', power: 95, accuracy: 88, pp: 5, cooldown: 0, attackType: 'spa', description: '召唤巨大的海啸波浪淹没敌人' },
+    leaf_blade: { id: 'leaf_blade', name: '叶刃斩', type: G.SkillType.DAMAGE, element: 'wood', power: 45, accuracy: 95, pp: 5, cooldown: 0, attackType: 'atk', description: '用锋利的叶片斩击敌人' },
+    nature_force: { id: 'nature_force', name: '自然之力', type: G.SkillType.DAMAGE, element: 'wood', power: 60, accuracy: 95, pp: 5, cooldown: 0, attackType: 'spa', description: '借助自然的力量攻击敌人' },
+    forest_wrath: { id: 'forest_wrath', name: '森林之怒', type: G.SkillType.DAMAGE, element: 'wood', power: 90, accuracy: 90, pp: 5, cooldown: 0, attackType: 'spa', description: '召唤森林的愤怒，释放强力攻击' },
+    ember: { id: 'ember', name: '火花', type: G.SkillType.DAMAGE, element: 'fire', power: 30, accuracy: 100, pp: 25, attackType: 'spa', description: '发射小火球攻击' },
+    flame_wheel: { id: 'flame_wheel', name: '火焰轮', type: G.SkillType.DAMAGE, element: 'fire', power: 45, accuracy: 95, pp: 20, attackType: 'atk', description: '身体被火焰包围，高速旋转攻击' },
+    fire_fang: { id: 'fire_fang', name: '火焰牙', type: G.SkillType.DAMAGE, element: 'fire', power: 55, accuracy: 90, pp: 18, attackType: 'atk', description: '用燃烧的牙齿撕咬敌人' },
+    bubble: { id: 'bubble', name: '泡沫', type: G.SkillType.DAMAGE, element: 'water', power: 30, accuracy: 100, pp: 25, attackType: 'spa', description: '吐出泡沫攻击' },
+    water_pulse: { id: 'water_pulse', name: '水波动', type: G.SkillType.DAMAGE, element: 'water', power: 45, accuracy: 95, pp: 20, attackType: 'spa', description: '发射水波攻击敌人' },
+    aqua_tail: { id: 'aqua_tail', name: '水流尾', type: G.SkillType.DAMAGE, element: 'water', power: 55, accuracy: 90, pp: 18, attackType: 'atk', description: '用覆盖水流的尾巴攻击' },
+    vine_whip: { id: 'vine_whip', name: '藤鞭', type: G.SkillType.DAMAGE, element: 'wood', power: 30, accuracy: 100, pp: 25, attackType: 'atk', description: '用藤蔓鞭打敌人' },
+    razor_leaf: { id: 'razor_leaf', name: '飞叶快刀', type: G.SkillType.DAMAGE, element: 'wood', power: 45, accuracy: 95, pp: 20, attackType: 'atk', description: '发射锋利的叶片切割敌人' },
+    seed_bomb: { id: 'seed_bomb', name: '种子炸弹', type: G.SkillType.DAMAGE, element: 'wood', power: 55, accuracy: 90, pp: 18, attackType: 'atk', description: '投掷爆炸性的种子' },
+    tackle: { id: 'tackle', name: '撞击', type: G.SkillType.DAMAGE, element: 'normal', power: 25, accuracy: 100, pp: 30, attackType: 'atk', description: '用身体撞击敌人' },
+    scratch: { id: 'scratch', name: '抓击', type: G.SkillType.DAMAGE, element: 'normal', power: 28, accuracy: 95, pp: 28, attackType: 'atk', description: '用爪子抓击敌人' },
+    quick_attack: { id: 'quick_attack', name: '电光一闪', type: G.SkillType.DAMAGE, element: 'normal', power: 35, accuracy: 100, pp: 25, attackType: 'atk', description: '高速冲向敌人攻击' },
+    bite: { id: 'bite', name: '咬住', type: G.SkillType.DAMAGE, element: 'normal', power: 40, accuracy: 100, pp: 22, attackType: 'atk', description: '用牙齿咬住敌人' },
+    sleep_powder: { id: 'sleep_powder', name: '催眠粉', type: G.SkillType.CONTROL, element: 'wood', power: 0, accuracy: 75, pp: 15, description: '撒出催眠粉使敌人入睡' },
+    paralyze_spore: { id: 'paralyze_spore', name: '麻痹孢子', type: G.SkillType.CONTROL, element: 'wood', power: 0, accuracy: 80, pp: 18, description: '释放麻痹孢子使敌人麻痹' },
+    thunder_wave: { id: 'thunder_wave', name: '电磁波', type: G.SkillType.CONTROL, element: 'electric', power: 0, accuracy: 90, pp: 20, description: '释放电磁波使敌人麻痹' },
+    shadow_sneak: { id: 'shadow_sneak', name: '暗影偷袭', type: G.SkillType.DAMAGE, element: 'dark', power: 35, accuracy: 100, pp: 20, attackType: 'atk', description: '从暗影中突袭敌人' },
+    flash: { id: 'flash', name: '闪光', type: G.SkillType.DEBUFF, element: 'light', power: 0, accuracy: 70, pp: 18, description: '发出强光降低敌人命中率' },
+    recover: { id: 'recover', name: '自我恢复', type: G.SkillType.TACTICAL, element: 'normal', power: 0, accuracy: 100, pp: 10, description: '恢复自身部分HP' },
+    iron_defense: { id: 'iron_defense', name: '铁壁', type: G.SkillType.TACTICAL, element: 'normal', power: 0, accuracy: 100, pp: 15, description: '大幅提升自身防御' },
+    agility: { id: 'agility', name: '高速移动', type: G.SkillType.TACTICAL, element: 'normal', power: 0, accuracy: 100, pp: 20, description: '大幅提升自身速度' },
+
+    // 寒冰玉兔专属技能
+    snowball: { id: 'snowball', name: '寒冰环', type: G.SkillType.DAMAGE, element: 'ice', power: 45, accuracy: 95, pp: 25, attackType: 'spa', description: '释放冰环攻击敌人' },
+    ice_bloom_flower: { id: 'ice_bloom_flower', name: '冰瀑寒花', type: G.SkillType.DAMAGE, element: 'ice', power: 85, accuracy: 90, pp: 5, attackType: 'spa', description: '绽放冰花造成强力冰系伤害' },
+    freeze_current: { id: 'freeze_current', name: '急冻寒流', type: G.SkillType.DAMAGE, element: 'ice', power: 65, accuracy: 95, pp: 20, attackType: 'spa', description: '释放极寒冷气攻击' },
+    reckless: { id: 'reckless', name: '鲁莽', type: G.SkillType.TACTICAL, element: 'normal', power: 1, accuracy: 95, pp: 10, description: '无视防御给予固定伤害，威力等于已损失HP' },
+    ability_boost: { id: 'ability_boost', name: '异能强化', type: G.SkillType.TACTICAL, element: 'normal', power: 0, accuracy: 100, pp: 15, description: '强化自身防御与特防' },
+    frost_fang: { id: 'frost_fang', name: '霜冻牙', type: G.SkillType.DAMAGE, element: 'ice', power: 55, accuracy: 95, pp: 18, attackType: 'atk', description: '用冻结的牙齿撕咬敌人' },
+    cold_wind: { id: 'cold_wind', name: '寒光缠绕', type: G.SkillType.DAMAGE, element: 'ice', power: 50, accuracy: 100, pp: 22, attackType: 'spa', description: '寒气缠绕降低对手速度' },
+  };
+})(window.GameApp);
