@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>秘境猎人 - 世界地图</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- 基础数据模块 (9个) -->
+    <script src="js/global.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/element.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/species.js"></script>
+    <script src="js/natures.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/ui-base.js"></script>
+    <script src="js/pet-icons.js"></script>
+    
+    <!-- 核心类 (4个) -->
+    <script src="js/pet.js"></script>
+    <script src="js/pet-manager.js"></script>
+    <script src="js/bag-manager.js"></script>
+    <script src="js/game-state.js"></script>
+
+    <!-- 面板组件 (6/6) -->
+    <script src="js/panels/top-bar.js"></script>
+    <script src="js/panels/bottom-bar.js"></script>
+    <script src="js/panels/warehouse-panel.js"></script>
+    <script src="js/panels/team-panel.js"></script>
+    <script src="js/panels/bag-panel.js"></script>
+    <script src="js/panels/settings-panel.js"></script>
+
+    <!-- 场景组件 (8/8) -->
+    <script src="js/scenes/start-scene.js"></script>
+    <script src="js/scenes/loading-scene.js"></script>
+    <script src="js/scenes/save-scene.js"></script>
+    <script src="js/scenes/world-scene.js"></script>
+    <script src="js/scenes/tutorial-scene.js"></script>
+    <script src="js/scenes/area-scene.js"></script>
+    <script src="js/scenes/battle-scene.js"></script>
+    <script src="js/scenes/home-scene.js"></script>
+
+    <!-- 原始游戏（始终保留） -->
+    <script src="game.js"></script>
+</body>
+</html>
